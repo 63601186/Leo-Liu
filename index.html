@@ -27,7 +27,7 @@
                 <ons-list-item>
                     <label class="left">Project</label>
                     <label class="center">
-                        <ons-input id="hailiu-taist-tokyo" placeholder="Firebase project"></ons-input>
+                        <ons-input id="project-name" placeholder="Firebase project"></ons-input>
                     </label>
                 </ons-list-item>
                 <ons-list-item>
@@ -84,9 +84,9 @@
         const arrMax = arr => {return Math.max(...arr)};
 
         function submitFirebase(t) {
-            const projName = document.getElementById('hailiu-taist-tokyo').value;
-            const pathName = document.getElementById('GPS TEST').value;
-            let Url = 'https://hailiu-taist-tokyo.firebaseio.com/' + 'GPS TEST' + '.json';            
+            const projName = document.getElementById('project-name').value;
+            const pathName = document.getElementById('path-name').value;
+            let Url = 'https://' + projName + '.firebaseio.com/' + pathName + '.json';            
             let Data = {
                 timestamp: t,
                 latitude: posLatitude,
